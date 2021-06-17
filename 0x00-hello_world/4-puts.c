@@ -1,6 +1,6 @@
 #include<stdio.h>
 /*
- * basic c program using puts
+ * main - is a function
  */
 int main(void)
 
