@@ -1,8 +1,8 @@
 #include<stdio.h>
 /*
- * main - is a function
+ * C program with puts
  */
-int main(void)
+int main(void)/*main - is a function*/
 
 {
 
