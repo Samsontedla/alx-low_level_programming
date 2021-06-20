@@ -3,7 +3,6 @@
  *main - Entry point
  *
  *return: Always 0 (Success)
- *
  */
 int main(void)
 {
@@ -16,6 +15,5 @@ while (n < 10)
 		putchar(',');
 	putchar(' ');
 }
-putchar('\n');
 return (0);
 }
