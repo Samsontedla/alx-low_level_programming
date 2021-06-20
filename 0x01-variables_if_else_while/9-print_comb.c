@@ -13,6 +13,7 @@ while (n < 10)
 	n++;
 	if (n < 10)
 		putchar(',');
+	if (n <= 9)
 	putchar(' ');
 }
 putchar('\n');
