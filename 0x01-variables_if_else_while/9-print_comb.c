@@ -11,9 +11,10 @@ while (n < 10)
 {
 	putchar(n % 10 + '0');
 	n++;
-	if (n <= 9)
+	if (n < 10)
 		putchar(',');
 	putchar(' ');
 }
+putchar('\n');
 return (0);
 }
