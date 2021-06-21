@@ -1,11 +1,9 @@
 #include <stdio.h>
 /**
+ *main - Entry point
  *
- * This is a program that prints out the alphabet
- *
+ *Return: Always 0 (Success)
  */
-
-/*betty style doc for functions main goes here*/
 int main(void)
 {
 char ch, CH;
