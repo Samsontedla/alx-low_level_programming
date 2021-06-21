@@ -1,18 +1,21 @@
 #include <stdio.h>
-/*
- *Print out alphabet with out q and e
+/**
+ *main - Entry point
  *
- *
+ *Return: Always 0 (Success)
  */
-
-/*betty style doc for function main goes there*/
 int main(void)
 {
-char ch;
-do {
-	for (ch = 'a'; ch <= 'z' ; ch++)
+int ch;
+ch = 'a';
+for (; ch <= 'z' ; ch++)
+	{
+	if (ch == 'e' || ch == 'q')
+	{
+	continue;
+	}
 	putchar(ch);
-} while(ch!='e');
+	}
 putchar('\n');
 return (0);
 }
