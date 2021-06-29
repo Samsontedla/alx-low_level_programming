@@ -1,10 +1,10 @@
 #include "holberton.h"
 /**
- * _strlen - funciton to count length of string
+ *_strlen - funciton to count length of string
  *
  * @str: string
  *
- * return: Count
+ * Return: Count
  */
 int _strlen(char *str)
 {
@@ -17,9 +17,9 @@ int _strlen(char *str)
 	return (count);
 }
 /**
- * puts_half - function that prints half of a string
+ *puts_half - function that prints half of a string
  *
- * @str - string
+ * @str: string
  *
  * Return: nothing
  */
@@ -30,13 +30,13 @@ void puts_half(char *str)
 
 	len = _strlen(str);
 	i = len / 2;
-	
+
 	if (len % 2 != 0)
 	{
 		i = (len - 1) / 2;
 	}
 
-	while (i < len)
+	while (i <= len)
 	{
 		_putchar(str[i]);
 		i++;
