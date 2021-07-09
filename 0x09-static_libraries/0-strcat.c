@@ -1,10 +1,10 @@
 #include "holberton.h"
 /**
- *_strlen - functions that counts length of a string
+ *_str_len - functions that counts length of a string
  *@s: string
  *Return: length
  */
-int _strlen(char *s)
+int _str_len(char *s)
 {
 	int length = 0;
 
@@ -23,9 +23,9 @@ int _strlen(char *s)
  */
 char *_strcat(char *dest, char *src)
 {
-	int i, /*len_s;*/
+	int i,
 
-	len_d = _strlen(dest);
+	len_d = _str_len(dest);
 
 	for (i = 0; src[i] != '\0'; ++i, ++len_d)
 	{
