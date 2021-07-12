@@ -9,29 +9,41 @@
  */
 int main(int argc __attribute__((unused)), char **argv)
 {
-	int c, i;
+	int cents, coins;
 
-	i = atoi(argv[1]) % 25;
+	if (argc != 2)
+	{
+		printf("Error\n");
+		return (1);
+	}
 
-	if (i == 0)
+	cents = atoi(argv[1]);
+
+	while (cents > 0)
 	{
-		c = atoi(argv[1]) / 25;
-	}
-	else if (i != 0)
-	{
-		if (i % 10 == 0)
+		coins++;
+		if ((cents - 25) >= 0)
 		{
-			c = (atoi(argv[1]) / 25) + (i / 10);
+			cents -= 25;
+			continue;
 		}
-		else if (i % 10 != 0)
+		if ((cents - 10) >= 0)
 		{
-			c = (atoi(argv[1]) / 25) + (i / 10) + ((i % 10) / 2);
-			if ((i % 10) % 2 != 0)
-			{
-			c = (atoi(argv[1]) / 25) + (i / 10) + ((i % 10) / 2) + (((i % 10) % 2) / 1);
-			}
+			cents -= 10;
+			continue;
 		}
+		if ((cents - 5) >= 0)
+		{
+			cents -= 5;
+			continue;
+		}
+		if ((cents - 2) >= 0)
+		{
+			cents -= 2;
+			continue;
+		}
+		cents--;
 	}
-	printf("%d\n", c);
+	printf("%d\n", coins);
 	return (0);
 }
