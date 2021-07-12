@@ -9,18 +9,14 @@
  */
 int main(int argc, char **argv)
 {
-	int i;
-	int mul = 0;
+	int mul;
 
-	if (argc > 1)
+	if (argc == 3)
 	{
-		for (i = 1 ; i < argc ; i++)
-		{
-			mul = atoi(argv[i]) * atoi(argv[i - 1]);
-		}
+		mul = atoi(argv[2]) * atoi(argv[1]);
 		printf("%d\n", mul);
 	}
-	else if (argc == 1)
+	else if (argc > 3 || argc < 3)
 	{
 		printf("Error\n");
 		return (1);
