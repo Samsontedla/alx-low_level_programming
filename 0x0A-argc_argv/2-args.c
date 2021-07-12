@@ -6,7 +6,7 @@
  *@argv: argument vector
  *Return: 0 in success
  */
-int main(int argc __attribute__((unused)), char **argv)
+int main(int argc, char **argv)
 {
 	int i;
 	int j;
