@@ -1,15 +1,15 @@
 #include "holberton.h"
 #include <stdlib.h>
 /**
- *alloc_grid - function that returns a 2D array
- *@width: size of row
+ *free_grid - function that frees a grid allocated by alloc_grid
+ *@grid: 2D array
  *@height: size of column
- *Return: pointer to array
+ *Return: freed grid
  */
 void free_grid(int **grid, int height)
 {
 	int i;
-	
+
 	for (i = 0; i < height ; i++)
 	{
 		free(grid[i]);
