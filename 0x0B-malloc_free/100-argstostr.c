@@ -8,7 +8,7 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int agc, byte, size, index = 0;
+	int agc, byte, size = ac, index;
 	char *agv;
 
 	if (ac == 0 || av == NULL)
@@ -28,6 +28,8 @@ char *argstostr(int ac, char **av)
 	{
 		return (NULL);
 	}
+
+	index = 0;
 
 	for (agc = 0; agc < ac; agc++)
 	{
