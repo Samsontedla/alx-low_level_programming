@@ -9,43 +9,29 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int index, len = n, i, len2 = 0;
+	unsigned int i = 0, j = 0,  len1 = 0, len2 = 0;
 	char *s;
 
 	if (s1 == NULL)
-	{
 		s1 = "";
-	}
 	if (s2 == NULL)
-	{
 		s2 = "";
-	}
-	for (index = 0; s1[index]; index++)
-	{
-		len++;
-	}
-	s = malloc(sizeof(char) * (len + 1));
-	if (s == NULL)
-	{
-		return (NULL);
-	}
-	len = 0;
-	for (index = 0; s1[index] ; index++)
-	{
-		s[len++] = s1[index];
-	}
-	for (i = 0; s2[i] ; i++)
-	{
+	while (s1 && s1[len1])
+		len1++;
+	while (s2 && s2[len2])
 		len2++;
-	}
-	for (index = 0; s2[index] && n > index; index++)
-	{
-		s[len++] = s2[index];
-	}
-	for (index = 0; s2[index] && n > len2; index++)
-	{
-		s[len++] = s2[index];
-	}
-	s[len] = '\0';
+	if (n < len2)
+		s = malloc(sizeof(char) * (len1 + n + 1));
+	else if (n > len2)
+		s = malloc(sizeof(char) * (len1 + len2 + 1));
+	if (s == NULL)
+		return (NULL);
+	for (i = 0; i < len1 ; i++)
+		s[i] = s1[i];
+	for (; s2[j] && n < len2 && i < (len1 + n); j++)
+		s[i++] = s2[j];
+	for (; s2[j] && n >= len2 && i < (len1 + len2); j++)
+		s[i++] = s2[j++];
+	s[i] = '\0';
 	return (s);
 }
