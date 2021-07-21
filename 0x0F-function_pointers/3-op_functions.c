@@ -10,7 +10,7 @@ int op_add(int a, int b)
 	return (a + b);
 }
 /**
- *op_add - function that subtracts two integers
+ *op_sub - function that subtracts two integers
  *@a: integer
  *@b: integer
  *Return: result
@@ -20,7 +20,7 @@ int op_sub(int a, int b)
 	return (a - b);
 }
 /**
- *op_add - function that multiplies two integers
+ *op_mul - function that multiplies two integers
  *@a: integer
  *@b: integer
  *Return: result
@@ -30,7 +30,7 @@ int op_mul(int a, int b)
 	return (a * b);
 }
 /**
- *op_add - function that divides two integers
+ *op_div - function that divides two integers
  *@a: integer
  *@b: integer
  *Return: result
@@ -40,7 +40,7 @@ int op_div(int a, int b)
 	return (a / b);
 }
 /**
- *op_add - function that modulo two integers
+ *op_mod - function returns the remainder two integers
  *@a: integer
  *@b: integer
  *Return: result
