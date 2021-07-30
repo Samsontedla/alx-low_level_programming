@@ -7,9 +7,9 @@
  */
 size_t print_list(const list_t *h)
 {
-	int count = 1;
+	int count = 0;
 
-	while (h->next != NULL)
+	while (h)
 	{
 		if (h->str == NULL)
 		{
