@@ -6,11 +6,13 @@
  */
 int main(void)
 {
-char D;
-for (D = '0' ; D <= '9' ; D++)
-	putchar(D);
-for (D = 'a' ; D <= 'f' ; D++)
-	putchar(D);
-putchar('\n');
+	char D;
+
+	for (D = '0' ; D <= '9' ; D++)
+		putchar(D);
+	for (D = 'a' ; D <= 'f' ; D++)
+		putchar(D);
+	putchar('\n');
+
 	return (0);
 }
